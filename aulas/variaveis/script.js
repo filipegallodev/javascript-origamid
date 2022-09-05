@@ -2,10 +2,6 @@ var firstName = "Filipe";
 var idade = 22;
 var comidaFavorita;
 comidaFavorita = "Pizza";
-var lastName;
-var altura;
-var cidade;
-var estado;
-var pais;
+var lastName = "Gallo", altura, cidade, estado, pais;
 
-console.log(nome, idade, comidaFavorita)
+console.log(firstName, lastName, idade, comidaFavorita)
