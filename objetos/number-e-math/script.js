@@ -50,3 +50,38 @@
 
 // Número entre 75 e 100
 // console.log(Math.round(Math.random() * 25) + 75);
+
+console.log("- Exercícios - ");
+// Retorne um número aleatório
+// entre 1050 e 2000
+console.log(Math.round(Math.random() * 950) + 1050);
+
+// Retorne o maior número da lista abaixo
+const numeros = "4, 5, 20, 8, 9";
+const arrayNumeros = numeros.split(", ");
+const numeroMaximo = Math.max(...arrayNumeros);
+console.log(numeroMaximo);
+
+// Crie uma função para limpar os preços
+// e retornar os números com centavos arredondados
+// depois retorne a soma total
+const listaPrecos = ["R$ 59,99", " R$ 100,222", "R$ 230  ", "r$  200"];
+
+function limparPreco(preco) {
+  preco = preco.toUpperCase().replace("R$", "").trim().replace(",", ".");
+  preco = Number.parseFloat(preco).toFixed(2);
+  return preco;
+}
+
+let somaTotal = 0;
+listaPrecos.forEach((preco) => {
+  preco = limparPreco(preco);
+  somaTotal += Number.parseFloat(preco);
+});
+
+console.log(
+  `Soma total: ${somaTotal.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  })}`
+);
