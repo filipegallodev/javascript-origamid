@@ -199,8 +199,7 @@ const compras = [
 ];
 
 const valorComprasTotal = compras.reduce((total, item) => {
-  const precoLimpo = +item.preco.replace("R$", "").replace(",", ".").trim();
+  const precoLimpo = +item.preco.replace("R$ ", "").replace(",", ".");
   return total + precoLimpo;
 }, 0);
-
 console.log(valorComprasTotal);
