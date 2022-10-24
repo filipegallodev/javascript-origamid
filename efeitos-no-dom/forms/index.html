@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <style>
+      label {
+        display: block;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        margin-top: 1rem;
+      }
+
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0.5rem;
+        border: 2px solid #000;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      textarea {
+        height: 150px;
+      }
+
+      .invalido {
+        border-color: #f00;
+      }
+    </style>
+
+    <form name="contato" id="contato">
+      <label for="nome">Nome</label>
+      <input type="text" name="nome" id="nome" required />
+      <span class="erro"></span>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required />
+      <span class="erro"></span>
+      <label for="mensagem">Mensagem</label>
+      <textarea name="mensagem" id="mensagem"></textarea>
+    </form>
+    <span class="texto"></span>
+
+    <script>
+      const contato = document.querySelector("#contato");
+      const dados = {};
+
+      function handleChange(event) {
+        const target = event.target;
+
+        // if (!target.checkValidity()) {
+        //   target.classList.add("invalido");
+        //   contato.nome.setCustomValidity("Nome é totalmente necessário");
+        //   target.nextElementSibling.innerText = target.validationMessage;
+        // }
+        // texto.innerText = target.value;
+
+        dados[event.target.name] = event.target.value;
+        console.log(dados);
+      }
+
+      // contato.addEventListener("keyup", handleChange);
+      contato.addEventListener("change", handleChange);
+    </script>
+  </body>
+</html>
