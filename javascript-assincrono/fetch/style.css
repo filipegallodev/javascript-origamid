@@ -1,0 +1,15 @@
+body {
+  background-color: #cfc;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+label,
+input,
+button {
+  display: block;
+}
+
+button {
+  margin-top: 4px;
+  padding: 4px 24px;
+}
