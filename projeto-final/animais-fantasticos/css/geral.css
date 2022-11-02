@@ -1,4 +1,12 @@
-body, h1, h2, ul, li, p, dd, dt, dl {
+body,
+h1,
+h2,
+ul,
+li,
+p,
+dd,
+dt,
+dl {
   margin: 0px;
   padding: 0px;
 }
@@ -27,7 +35,7 @@ body {
   grid-column: 3 / 5;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  background: #FB5;
+  background: #fb5;
 }
 
 .menu ul {
@@ -42,11 +50,11 @@ body {
   margin-right: 10px;
   color: #222;
   text-decoration: none;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 0.875rem;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
 }
 
 .grid-section {
@@ -61,7 +69,7 @@ body {
 }
 
 .titulo {
-  font-family: 'Playfair Display SC', georgia;
+  font-family: "Playfair Display SC", georgia;
   font-size: 6rem;
   line-height: 1;
   font-weight: 400;
@@ -70,21 +78,21 @@ body {
 }
 
 .animais h2 {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   margin-bottom: 1rem;
-  color: #E54;
+  color: #e54;
 }
 
 .animais h2::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 40px;
   height: 10px;
   margin-right: 10px;
-  background: #FB5;
+  background: #fb5;
 }
 
 .animais p {
@@ -108,7 +116,7 @@ body {
 }
 
 .animais-lista::-webkit-scrollbar-thumb {
-  background: #FB5;
+  background: #fb5;
   border-left: 4px solid #faf6ed;
   border-right: 4px solid #faf6ed;
 }
@@ -126,30 +134,30 @@ body {
 }
 
 .faq-lista {
-  grid-column: 2 / 4
+  grid-column: 2 / 4;
 }
 
 .faq-lista dt {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: bold;
   margin-top: 2rem;
-  margin-bottom: .5rem;
-  color: #E54;
+  margin-bottom: 0.5rem;
+  color: #e54;
   cursor: pointer;
 }
 
 .faq-lista dt::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 20px;
   height: 10px;
   margin-right: 10px;
-  background: #FB5;
+  background: #fb5;
 }
 
 .faq-lista dd {
   font-family: Helvetica, Arial;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   margin-left: 30px;
 }
 
@@ -167,23 +175,23 @@ body {
 }
 
 .dados li::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 20px;
   height: 10px;
   margin-right: 10px;
-  background: #FB5;
+  background: #fb5;
 }
 
 .copy {
   grid-column: 3/5;
   margin-bottom: 2rem;
-  background: #FB5;
+  background: #fb5;
 }
 
 .copy p {
   padding: 20px;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: bold;
 }
 
@@ -191,7 +199,9 @@ body {
   .grid-container {
     grid-template-columns: 1fr;
   }
-  .menu, .grid-section, .copy {
+  .menu,
+  .grid-section,
+  .copy {
     grid-column: 1;
   }
   .grid-section {
@@ -201,11 +211,13 @@ body {
   .animais-lista {
     grid-column: 1;
   }
-  .faq-lista, .dados, .mapa {
+  .faq-lista,
+  .dados,
+  .mapa {
     grid-column: 1 / 3;
   }
   .grid-section h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .menu {
     margin-top: 0px;
@@ -224,11 +236,11 @@ body {
 }
 
 [data-tab="content"] section.ativo.show-right {
-  animation: show-right .5s forwards;
+  animation: show-right 0.5s forwards;
 }
 
 [data-tab="content"] section.ativo.show-down {
-  animation: show-down .5s forwards;
+  animation: show-down 0.5s forwards;
 }
 
 @keyframes show-right {
@@ -258,17 +270,24 @@ body {
 }
 
 [data-anime="accordion"] dt::after {
-  content: '⬎';
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: url("../img/arrow-red.svg") no-repeat center center;
   margin-left: 10px;
+  transform: rotate(90deg);
+  transition: transform 0.3s;
 }
 
 [data-anime="accordion"] dt.ativo::after {
-  content: '⬏';
+  content: "";
+  transform: rotate(-90deg);
 }
 
 [data-anime="accordion"] dd.ativo {
   display: block;
-  animation: slideDown .5s forwards;
+  animation: slideDown 0.5s forwards;
 }
 
 @keyframes slideDown {
@@ -285,7 +304,7 @@ body {
 .js [data-anime="scroll"] {
   opacity: 0;
   transform: translate3d(-30px, 0, 0);
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .js [data-anime="scroll"].ativo {
@@ -295,22 +314,29 @@ body {
 
 [data-semana]::after {
   display: inline-block;
-  content: '';
+  content: "";
   width: 6px;
   height: 6px;
-  background: #E54;
+  background: #e54;
   border-radius: 50%;
   margin-left: 4px;
   border: 2px solid #000;
 }
 
 [data-semana].aberto::after {
-  background: #3F4;
+  background: #3f4;
 }
 
 .btc-preco {
-  background: #3F4;
-  padding: .2rem .5rem;
+  background: #3f4;
+  padding: 0.2rem 0.5rem;
   font-weight: bold;
-  border-radius: 2px;  
+  border-radius: 2px;
+}
+
+.arrow-black {
+  background: url("../img/arrow-black.svg") no-repeat center center;
+  display: inline-block;
+  width: 8px;
+  height: 10px;
 }
